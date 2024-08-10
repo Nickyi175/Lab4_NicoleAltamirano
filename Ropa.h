@@ -13,8 +13,14 @@ public:
         : Producto(nombreProd, precioProd, cantidadProd), talla(talla), color(color) {}
 
     QString getInfo() const override {
-        return Producto::getInfo() + QString(", Talla: %1, Color: %2").arg(QString::number(talla)).arg(color);
+        return Producto::getInfo() + QString("Talla: "+QString::number(talla)+"\nColor: "+ color );
     }
+
+    int getTalla() const { return talla; }
+    QString getColor() const { return color; }
+
+    void setTalla(int t) { talla = t; }
+    void setColor(const QString &col) { color = col; }
 
 };
 

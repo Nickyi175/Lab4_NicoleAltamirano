@@ -48,11 +48,37 @@ private slots:
 
     void on_btn_eliminar_clicked();
 
+    void on_btn_modificar_clicked();
+
+    void on_comboBox_modificar_activated(int index);
+
+    void on_comboBox_TipoProd_2_activated(int index);
+
+    void on_btn_bold_clicked();
+
+    void on_btn_underline_clicked();
+
+    void on_btn_cursive_clicked();
+
+    void on_btn_eliminarM_clicked();
+
+    void on_btn_modificarM_clicked();
+
+    void on_btn_regresar1_clicked();
+
+    void on_btn_regresar1_2_clicked();
+
+    void on_btn_regresar1_3_clicked();
+
 private:
     Ui::MainWindow *ui;
     QList<Tarea*> tareas;
     QGraphicsScene *scene;
     std::vector<Figura*> figuras;
     std::vector<Producto*> productos;
+    bool activated = false;
+    bool under = false;
+    bool bold = false;
+    bool italic = false;
 };
 #endif // MAINWINDOW_H

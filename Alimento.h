@@ -15,6 +15,13 @@ public:
     QString getInfo() const override {
         return Producto::getInfo() + QString("Fecha de Caducidad: " + expiracion.toString("dd/MM/yyyy") +"\nTipo de Alimento: "+tipoAlimento);
     }
+
+    QDate getExpiracion() const { return expiracion; }
+    QString getTipoAlimento() const { return tipoAlimento; }
+
+    void setExpiracion(const QDate &exp) { expiracion = exp; }
+    void setTipoAlimento(const QString &tipo) { tipoAlimento = tipo; }
+
 };
 
 #endif // ALIMENTO_H
